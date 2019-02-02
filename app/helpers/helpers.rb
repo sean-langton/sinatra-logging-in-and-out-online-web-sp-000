@@ -5,7 +5,7 @@ class Helpers
   end
 
   def self.is_logged_in?(session)
-    Helpers.current_user == session[:user_id]
+    session.has_key?[:user_id]
   end
 
 end
